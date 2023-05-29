@@ -30,7 +30,7 @@ body{
 }
 .tab{
     margin: 0px 10px 0px 10px;
-    background-color: grey;
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border-radius: 5px;
 }
