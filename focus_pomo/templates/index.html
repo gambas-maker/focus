@@ -14,9 +14,15 @@
             <a href="#" class="tab" style="text-decoration:none">
                 <li>Settings</li>
             </a>
-            <a href="#" class="tab" style="text-decoration:none">
-                <li>Login</li>
-            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'accounts:logout' %}" class="tab" style="text-decoration:none">
+                    <li>Logout</li>
+                </a>
+            {% else %}
+                <a href="{% url 'accounts:login' %}" class="tab" style="text-decoration:none">
+                    <li>Login</li>
+                </a>
+            {% endif %}
         </div>
     </ul>
     <div class="screen">
