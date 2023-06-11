@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block body_block %}
+<form action="" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form%}
+    <input type="submit" value="Go">
+</form>
+{% endblock body_block %}

@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'tasks',
     'accounts',
-    'django_bootstrap5',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [

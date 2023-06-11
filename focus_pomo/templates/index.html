@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load bootstrap5 %}
 {% block body_block %}
     <ul class="header">
         <div class="brand">
@@ -30,6 +30,12 @@
     </div>
     <div class="task">
         <h2>Tasks</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <input type="submit" value="Create">
+        </form>
+         {% comment %} {{for task in tasks}} {% endcomment %}
 
     </div>
     <div class="screen">
