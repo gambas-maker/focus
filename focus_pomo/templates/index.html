@@ -35,10 +35,12 @@
             {% bootstrap_form form %}
             <input type="submit" value="Create">
         </form>
-         {% comment %} {{for task in tasks}} {% endcomment %}
 
     </div>
     <div class="screen">
         <h2>Sum</h2>
+        {% for tas in object_list %}
+         <p>{{tas.title}}</p>
+         {% endfor %}
     </div>
 {% endblock body_block %}

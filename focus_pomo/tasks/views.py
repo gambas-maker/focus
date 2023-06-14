@@ -10,5 +10,4 @@ class TaskCreation(CreateView):
     fields = ('title', 'note', 'rounds', 'time')
     template_name = 'index.html'
 
-    # def get_queryset(self) -> QuerySet[Any]:
-    #     return super().get_queryset()
+    
