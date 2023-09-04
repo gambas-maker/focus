@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 {% block body_block %}
     <h1>Welcome to the Sign-up Page!</h1>
@@ -8,3 +9,15 @@
     </form>
 {% endblock body_block %}
 
+=======
+ {% extends "base.html" %}
+ {% block body_block %}
+ {% load bootstrap5 %}
+ <form action="" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="SignUp">
+ </form>
+ 
+ {% endblock body_block %}
+>>>>>>> 6f35e699ff10e261826416ea7ca6d108e01df272

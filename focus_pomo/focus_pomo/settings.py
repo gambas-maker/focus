@@ -28,8 +28,8 @@ SECRET_KEY = "django-insecure-98rde#o6kpp(!)_&m*!pnelg9p6y)wclsp0f!@1^(u&v3xam@n
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+# specifies the custom model as the user model for our project
+AUTH_USER_MODEL = "accounts.CustomUser"
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'tasks',
+    'accounts',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +129,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'

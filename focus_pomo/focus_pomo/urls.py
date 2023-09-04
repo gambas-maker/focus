@@ -18,6 +18,9 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
+    path('accounts/', include('accounts.urls')),
     path("admin/", admin.site.urls),
+    path('tasks/', include('tasks.urls', namespace='tasks')),
     path('', views.Index.as_view(), name='index'),
+    path('task_creation/', views.TaskCreation.as_view(), name='task_creation'),
 ]

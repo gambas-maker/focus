@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load bootstrap5 %}
+{% block body_block %}
+<form action="" method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" value="login">
+</form>
+<a href="{% url 'accounts:sign_up' %}">Create an account?</a>
+{% endblock body_block %}
