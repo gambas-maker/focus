@@ -7,4 +7,4 @@ class Task(models.Model):
     title = models.CharField(max_length=150)
     note = models.TextField()
     rounds = models.IntegerField()
-    time = models.TimeField()
+    time = models.TimeField(blank=True, null=True)
