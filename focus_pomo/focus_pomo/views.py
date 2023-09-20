@@ -1,18 +1,27 @@
-from django.views.generic import TemplateView, FormView, ListView
+from typing import Any, Dict
+from django.views.generic import TemplateView, CreateView, ListView,FormView
 from tasks.forms import TaskForm
-from tasks.views import TaskCreation
 from tasks.models import Task
 from django.urls import reverse_lazy
-from django.utils import timezone
 
-class Index(FormView, ListView):
-    form_class = TaskForm
+class Index(FormView, TemplateView):
     template_name = 'index.html'
     success_url = reverse_lazy('index')
 
-    model = Task
+    def get(self, request, *args, **kwargs):
+        form = TaskForm()
+        return self.render_to_response(self.get_context_data(form=form))
 
-    def get_context_data(self, **kwargs):
+    def post(self, request, *args, **kwargs):
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Redirect or handle success as needed
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+        
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)
-        # context[""] = timezone.now()
+        context['tasks'] = Task.objects.all()
         return context

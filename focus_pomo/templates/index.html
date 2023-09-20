@@ -32,14 +32,14 @@
         <h2>Tasks</h2>
         <form method="post">
             {% csrf_token %}
-            {% bootstrap_form form %}
+            {{form}}
             <input type="submit" value="Create">
         </form>
 
     </div>
     <div class="screen">
         <h2>Sum</h2>
-        {% for tas in object_list %}
+        {% for tas in tasks %}
          <p>{{tas.title}}</p>
          {% endfor %}
     </div>
