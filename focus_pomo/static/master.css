@@ -1,5 +1,6 @@
 body{
     background-color: rgb(186, 73, 73);
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -46,4 +47,27 @@ body{
     height: 300px;
     margin-bottom: 10px;
     border-style: solid;
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 10px;
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-right: 10px;
 }

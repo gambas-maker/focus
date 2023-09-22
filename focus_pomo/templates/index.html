@@ -28,6 +28,21 @@
     <div class="screen">
         <h2>Board</h2>
     </div>
+    <div class="screen">
+        <h2>Sum</h2>
+        {% for task in tasks %}
+        <div class="card">
+            <div class="title">
+                <p>Check</p>
+                <p>{{task.title}}</p>
+            </div>
+            <div class="settings">
+                <p>Count</p>
+                <p>3 dots</p>
+            </div>
+        </div>
+         {% endfor %}
+    </div>
     <div class="task">
         <h2>Tasks</h2>
         <form method="post">
@@ -36,11 +51,5 @@
             <input type="submit" value="Create">
         </form>
 
-    </div>
-    <div class="screen">
-        <h2>Sum</h2>
-        {% for tas in tasks %}
-         <p>{{tas.title}}</p>
-         {% endfor %}
     </div>
 {% endblock body_block %}
