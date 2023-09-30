@@ -24,5 +24,4 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('tasks/', include('tasks.urls')),
     path('', views.Index.as_view(), name='index'),
-    # path('task_creation/', views.TaskCreation.as_view(), name='task_creation'),   
 ]
