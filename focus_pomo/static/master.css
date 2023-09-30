@@ -71,3 +71,12 @@ body{
     gap: 10px;
     padding-right: 10px;
 }
+.selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h2{
+    color: white;
+    font-size: 16px;
+}
