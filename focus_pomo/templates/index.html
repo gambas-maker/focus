@@ -37,12 +37,12 @@
         {% for task in tasks %}
         <div class="card">
             <div class="title">
-                <p>Check</p>
-                <p>{{task.title}}</p>
+                <p><img src="static\images\check.png" alt="option icon" class="check"></p>
+                <p class="text">{{task.title}}</p>
             </div>
             <div class="settings">
-                <p>Count</p>
-                <p>3 dots</p>
+                <p class="text">/ {{task.rounds}}</p>
+                <p><img src="static\images\button-of-three-vertical-squares.png" alt="option icon" class="dots"></p>
             </div>
         </div>
          {% endfor %}
