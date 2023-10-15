@@ -37,8 +37,8 @@
             <h2>Long Break</h2>
         </div>
     </div>
-    <div class="screen">
-        <h2>Sum</h2>
+    <div class="task">
+        <h2>Tasks</h2>
         {% for task in tasks %}
         <div class="card" id="card{{ task.id }}">
             <div class="title">
@@ -59,20 +59,25 @@
                 <p class="text">{{task.note}}</p>
             </div>
             <div class="action">
-                <button type="submit">delete</button>
+                <a href="{% url 'task_delete' pk=task.pk %}">delete</a>
                 <button onclick="closeModal('{{ task.id }}')">cancel</button>
                 <button type="submit">save</button>
             </div>
         </div>
          {% endfor %}
     </div>
-    <div class="task">
-        <h2>Tasks</h2>
+
+    <div class="add_task" onclick="openForm()">
+        <img src="static\images\plus (1).png" alt="add icon" class="plus">
+        <p>Add Task</p>
+    </div>
+    <div class="task_creation">
         <form method="post">
             {% csrf_token %}
             {{form}}
             <input type="submit" value="Create">
         </form>
-
+        <button onclick="closeForm()">cancel</button>
     </div>
+
 {% endblock body_block %}

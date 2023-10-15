@@ -2,6 +2,7 @@ from typing import Any, Dict
 from django.views.generic import TemplateView, CreateView, ListView,FormView
 from tasks.forms import TaskForm
 from tasks.models import Task
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse_lazy
 
 class Index(FormView, TemplateView):
@@ -25,3 +26,13 @@ class Index(FormView, TemplateView):
         context = super().get_context_data(**kwargs)
         context['tasks'] = Task.objects.all()
         return context
+    
+def remove_task(task, pk):
+    task = get_object_or_404(Task, pk=pk)
+    task.delete()
+    return redirect('index')
+    # success_url = reverse_lazy('index')
+
+
+
+    
