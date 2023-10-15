@@ -1,7 +1,12 @@
 {% extends "base.html" %}
 {% load bootstrap5 %}
+{% load static %}
+
 {% block body_block %}
+<script src="{% static 'master.js' %}"></script>
+
     <ul class="header">
+
         <div class="brand">
             <a href="#" style="text-decoration:none">
                 <li>FocusPomo</li>
@@ -35,23 +40,28 @@
     <div class="screen">
         <h2>Sum</h2>
         {% for task in tasks %}
-        <div class="card">
+        <div class="card" id="card{{ task.id }}">
             <div class="title">
                 <p><img src="static\images\check.png" alt="option icon" class="check"></p>
                 <p class="text">{{task.title}}</p>
             </div>
             <div class="settings">
                 <p class="text">/ {{task.rounds}}</p>
-                <button class='none'><img src="static\images\button-of-three-vertical-squares.png" alt="option icon" class="dots"></button>
+                <button class='none' onclick="openModal('{{ task.id }}')">
+                    <img src="static\images\button-of-three-vertical-squares.png" alt="option icon" class="dots">
+                </button>
             </div>
-            <div class="modal">
-                <div class="update">
-                    
-                </div>
-                <div class="action">
-
-                </div>
-
+        </div>
+        <div class="modal" id="modal{{ task.id }}">
+            <div class="update">
+                <p class="text">{{task.title}}</p>
+                <p class="text">/ {{task.rounds}}</p>
+                <p class="text">{{task.note}}</p>
+            </div>
+            <div class="action">
+                <button type="submit">delete</button>
+                <button onclick="closeModal('{{ task.id }}')">cancel</button>
+                <button type="submit">save</button>
             </div>
         </div>
          {% endfor %}
