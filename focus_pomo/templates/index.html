@@ -65,19 +65,22 @@
             </div>
         </div>
          {% endfor %}
-    </div>
-
-    <div class="add_task" onclick="openForm()">
-        <img src="static\images\plus (1).png" alt="add icon" class="plus">
-        <p>Add Task</p>
-    </div>
-    <div class="task_creation">
-        <form method="post">
-            {% csrf_token %}
-            {{form}}
-            <input type="submit" value="Create">
-        </form>
-        <button onclick="closeForm()">cancel</button>
+         <div class="add_task" onclick="openForm()">
+            <img src="static\images\plus (1).png" alt="add icon" class="plus">
+            <p>Add Task</p>
+        </div>
+        <div class="task_creation">
+            <form method="post">
+                <div class="update">
+                    {% csrf_token %}
+                    {{form}}
+                </div>
+                <div class="action">
+                    <button onclick="closeForm()">cancel</button>
+                    <input type="submit" value="Create">
+                </div>
+            </form>
+        </div>
     </div>
 
 {% endblock body_block %}
