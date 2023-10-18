@@ -5,7 +5,7 @@ from django.forms import TextInput
 class TaskForm(forms.ModelForm):
     class Meta():
         model = Task
-        fields = ('title', 'note', 'rounds')
+        fields = ('title', 'rounds', 'note')
         widgets = {
             'title': TextInput(attrs={
                 'class': "form-control",
@@ -19,6 +19,5 @@ class TaskForm(forms.ModelForm):
         labels = {
             'title': "",
             'note': "",
-            'rounds': ""
-
+            'rounds': "Est Pomodoros"
         }
