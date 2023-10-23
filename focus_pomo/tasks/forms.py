@@ -12,7 +12,7 @@ class TaskForm(forms.ModelForm):
                 'placeholder': 'What are you working on?',
             }),
             'note': TextInput(attrs={
-                "class": "form-control",
+                "class": "note-control",
                 "placeholder": "Some notes...",
             })
         }
@@ -21,3 +21,7 @@ class TaskForm(forms.ModelForm):
             'note': "",
             'rounds': "Est Pomodoros"
         }
+
+    def __init__(self, *args, **kwargs):
+        super(TaskForm, self).__init__(*args, **kwargs)
+        self.fields['rounds'].initial = 1

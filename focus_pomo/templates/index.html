@@ -74,6 +74,7 @@
                 <div class="update">
                     {% csrf_token %}
                     {{form}}
+                    <p onclick="openNotes()" class="note_creation">+ Add note</p>
                 </div>
                 <div class="action">
                     <button onclick="closeForm()">cancel</button>

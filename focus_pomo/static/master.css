@@ -144,18 +144,38 @@ h2{
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
+    padding: 10px 20px 0px;
 }
 
 .form-control{
     display: flex;
     flex-direction: column;
+    width: 90%;
     border-width: 0px;
     outline: none;
-    font-family: "Roboto";
-    padding: 10px;
+    font-family: 'Nunito', sans-serif;
+    color:rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    padding: 10px 0px 10px 0px;
     border-radius: 8px;
+}
+::placeholder{
+    color:rgba(0, 0, 0, 0.1);
+}
+.note-control{
+    display: none;
+    background-color:rgb(239, 239, 239);
+    border-width: 0px;
+    width: 90%;
+    margin: 10px 0px 10px 0px;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 15px;
+    outline: none;
 }
 
 .action{
     padding: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
