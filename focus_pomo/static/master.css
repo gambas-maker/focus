@@ -166,7 +166,7 @@ h2{
     display: none;
     background-color:rgb(239, 239, 239);
     border-width: 0px;
-    width: 90%;
+    width: 100%;
     margin: 10px 0px 10px 0px;
     font-family: "Roboto";
     font-weight: bold;
@@ -178,4 +178,9 @@ h2{
     padding: 10px;
     display: flex;
     justify-content: flex-end;
+}
+
+.round-control{
+    display: flex;
+    flex-direction: column;
 }

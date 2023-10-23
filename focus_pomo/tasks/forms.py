@@ -14,7 +14,10 @@ class TaskForm(forms.ModelForm):
             'note': TextInput(attrs={
                 "class": "note-control",
                 "placeholder": "Some notes...",
-            })
+            }),
+            'rounds': TextInput(attrs={
+                'class': "round-control",
+            }),
         }
         labels = {
             'title': "",
