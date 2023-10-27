@@ -60,7 +60,7 @@
             </div>
             <div class="action">
                 <div class="delete">
-                    <a href="{% url 'task_delete' pk=task.pk %}" style="text-decoration: none;">Delete</a>
+                    <a href="{% url 'task_delete' pk=task.pk %}" class="link">Delete</a>
                 </div>
                 <div>
                     <button onclick="closeModal('{{ task.id }}')" class="cancel">Cancel</button>

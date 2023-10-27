@@ -271,4 +271,9 @@ h2{
     color: rgb(136, 136, 136);
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
+    padding-top: 10px;
+}
+.link{
+    text-decoration: none;
+    color: rgb(136, 136, 136);
 }
