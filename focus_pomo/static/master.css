@@ -148,6 +148,11 @@ h2{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 20px, rgba(0, 0, 0, 0.1) 0px 3px 6px;
     padding: 10px 20px 0px;
 }
+.note_creation{
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: underline;
+    /* margin-top: 10px; */
+}
 
 .form-control{
     display: flex;
@@ -166,14 +171,18 @@ h2{
 }
 .note-control{
     display: none;
-    background-color:rgb(239, 239, 239);
     border-width: 0px;
-    width: 100%;
+    width: 99%;
     margin: 10px 0px 10px 0px;
     font-family: "Roboto";
     font-weight: bold;
     font-size: 15px;
+    background-color:rgb(239, 239, 239);
     outline: none;
+    margin-top: 20px;
+    height: 60px;
+    border-radius: 5px;
+    padding: 10px 0px 10px 5px;
 }
 
 .action{
@@ -181,8 +190,49 @@ h2{
     display: flex;
     justify-content: flex-end;
 }
-
 .round-control{
     display: flex;
     flex-direction: column;
+    font-family: "Nunito";
+    border-width: 0px;
+    background-color:rgb(239, 239, 239);
+    outline: none;
+    padding: 7px;
+    width: 30px;
+    border-radius: 5px;   
+}
+.round{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.round_style{
+    opacity: 0.4;
+    margin-left: 5px;
+    align-items: baseline;
+}
+.to_change{
+    margin-bottom: 3px;
+    font-family: "Nunito";
+}
+.arrow{
+    width: 10px;
+    height: 10px;
+}
+.btn_up{
+    border: 1px solid;
+    border-radius: 4px;
+    opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+}
+.btn_down{
+    border: 1px solid;
+    border-radius: 4px;
+    opacity: 0.9;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px;
+}
+.arrow_down{
+    width: 13px;
+    height: 13px;
 }

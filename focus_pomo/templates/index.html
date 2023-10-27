@@ -73,12 +73,23 @@
             <form method="post">
                 <div class="update">
                     {% csrf_token %}
-                    {{form}}
+                    {{ form.title }}                
+                    <div>
+                        <p class="to_change">Est Pomodoros</p>                    
+                        <div class="round">
+                            {{ form.rounds }}
+                            <div class="round_style">
+                                <button class="btn_up" onclick="roundCounter()"><img src="static\images\arrow-up.png" alt="Arrow up icon" class="arrow"></button>
+                                <button class="btn_down"><img src="static\images\arrow-down.png" alt="Arrow down icon" class="arrow"></button>
+                            </div>
+                        </div>
+                    </div>
+                    {{ form.note }}
                     <p onclick="openNotes()" class="note_creation">+ Add note</p>
                 </div>
                 <div class="action">
                     <button onclick="closeForm()">cancel</button>
-                    <input type="submit" value="Create">
+                    <input type="submit" value="Save">
                 </div>
             </form>
         </div>

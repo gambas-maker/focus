@@ -36,3 +36,14 @@ function openNotes(){
     note_creation.style.display = 'none';
     add_note.style.display = 'flex';
 }
+
+function roundCounter(){
+    const arrow_up = document.querySelector('.up');
+    const arrow_down = document.querySelector('.down');
+    const rounds = document.getElementById('id_rounds')
+
+    arrow_up.addEventListener('click', function (e){
+        e.preventDefault();
+        console.log(rounds)
+    });
+}

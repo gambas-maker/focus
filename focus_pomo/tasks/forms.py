@@ -1,6 +1,6 @@
 from tasks.models import Task
 from django import forms
-from django.forms import TextInput
+from django.forms import TextInput,Textarea
 
 class TaskForm(forms.ModelForm):
     class Meta():
@@ -11,7 +11,7 @@ class TaskForm(forms.ModelForm):
                 'class': "form-control",
                 'placeholder': 'What are you working on?',
             }),
-            'note': TextInput(attrs={
+            'note': Textarea(attrs={
                 "class": "note-control",
                 "placeholder": "Some notes...",
             }),
