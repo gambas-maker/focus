@@ -59,9 +59,13 @@
                 <p class="text">{{task.note}}</p>
             </div>
             <div class="action">
-                <a href="{% url 'task_delete' pk=task.pk %}">delete</a>
-                <button onclick="closeModal('{{ task.id }}')">cancel</button>
-                <button type="submit" value="Save" class="save">Save</button>
+                <div class="delete">
+                    <a href="{% url 'task_delete' pk=task.pk %}" style="text-decoration: none;">Delete</a>
+                </div>
+                <div>
+                    <button onclick="closeModal('{{ task.id }}')" class="cancel">Cancel</button>
+                    <button type="submit" value="Save" class="save">Save</button>
+                </div>
             </div>
         </div>
          {% endfor %}
@@ -88,8 +92,10 @@
                     <p onclick="openNotes()" class="note_creation">+ Add note</p>
                 </div>
                 <div class="action">
-                    <button onclick="closeForm()" class="cancel">Cancel</button>
-                    <input type="submit" value="Save" class="save">
+                    <div>
+                        <button onclick="closeForm()" class="cancel">Cancel</button>
+                        <input type="submit" value="Save" class="save">
+                    </div>
                 </div>
             </form>
         </div>

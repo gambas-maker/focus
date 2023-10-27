@@ -108,6 +108,7 @@ h2{
     border-radius: 5px;
     background-color: white;
     display: none;
+    margin-bottom: 20px;
 }
 
 .plus{
@@ -187,7 +188,7 @@ h2{
 .action{
     padding: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: rgb(239, 239, 239);
     border-radius: 0px 0px 5px 5px;
 }
@@ -250,13 +251,21 @@ h2{
     border: 2px solid rgb(34, 34, 34);
     font-family: 'Nunito Sans', sans-serif;
     border-radius: 5px;
-    padding: 12px;
+    padding: 8px;
     min-width: 70px;
 }
 .save:hover{
     opacity: 1;
 }
 .cancel{
+    background-color: rgb(239, 239, 239);
+    border-width: 0px;
+    color: rgb(136, 136, 136);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+}
+
+.delete{
     background-color: rgb(239, 239, 239);
     border-width: 0px;
     color: rgb(136, 136, 136);
