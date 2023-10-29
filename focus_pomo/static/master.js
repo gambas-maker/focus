@@ -38,12 +38,12 @@ function openNotes(){
 }
 
 function roundCounter(){
-    const arrow_up = document.querySelector('.up');
-    const arrow_down = document.querySelector('.down');
+    const arrow_up = document.querySelector('.btn_up');
+    const arrow_down = document.querySelector('.btn_down');
     const rounds = document.getElementById('id_rounds')
 
     arrow_up.addEventListener('click', function (e){
         e.preventDefault();
-        console.log(rounds)
+        console.log(rounds.value)
     });
 }
