@@ -37,13 +37,16 @@ function openNotes(){
     add_note.style.display = 'flex';
 }
 
+
 function roundCounter(){
     const arrow_up = document.querySelector('.btn_up');
     const arrow_down = document.querySelector('.btn_down');
-    const rounds = document.getElementById('id_rounds')
-
+    const rounds = document.querySelector('.round-control');
+    let counter = 0;
     arrow_up.addEventListener('click', function (e){
         e.preventDefault();
-        console.log(rounds.value)
+        counter++;
+        rounds.textContent = counter;
+        console.log(rounds.textContent)
     });
 }

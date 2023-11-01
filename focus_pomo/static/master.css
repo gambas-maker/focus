@@ -277,3 +277,10 @@ h2{
     text-decoration: none;
     color: rgb(136, 136, 136);
 }
+.add_task_action{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(239, 239, 239);
+    border-radius: 0px 0px 5px 5px;
+}

@@ -81,7 +81,9 @@
                     <div>
                         <p class="to_change">Est Pomodoros</p>                    
                         <div class="round">
-                            {{ form.rounds }}
+                            <!-- <div class="value_rounds"> -->
+                                {{ form.rounds }}
+                            <!-- </div> -->
                             <div class="round_style">
                                 <button class="btn_up" onclick="roundCounter()"><img src="static\images\arrow-up.png" alt="Arrow up icon" class="arrow"></button>
                                 <button class="btn_down"><img src="static\images\arrow-down.png" alt="Arrow down icon" class="arrow"></button>
@@ -91,7 +93,7 @@
                     {{ form.note }}
                     <p onclick="openNotes()" class="note_creation">+ Add note</p>
                 </div>
-                <div class="action">
+                <div class="add_task_action">
                     <div>
                         <button onclick="closeForm()" class="cancel">Cancel</button>
                         <input type="submit" value="Save" class="save">
