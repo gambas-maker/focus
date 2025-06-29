@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'tasks',
     'accounts',
-    'bootstrap5',
-    'django_extensions',
+    'django_bootstrap5',
+    # 'django_extensions',
 ]
 
 MIDDLEWARE = [
